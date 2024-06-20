@@ -1,8 +1,8 @@
-**MIDI Controller App**
+**Syncable**
 
 Overview
 
-The MIDI Controller App is a React Native application designed to facilitate the sending of MIDI messages through a user-friendly interface. Users can configure MIDI settings, including IP address and port, and send MIDI messages by interacting with buttons on the main screen. The app also includes functionality for selecting and managing setlists and songs.
+Syncable is a React Native application designed to facilitate the sending of MIDI messages through a user-friendly interface. Users can configure MIDI settings, including IP address and port, and send MIDI messages by interacting with buttons on the main screen. The app also includes functionality for selecting and managing setlists and songs.
 Features
 
   Send MIDI Messages: Send custom MIDI messages by pressing buttons on the main screen.

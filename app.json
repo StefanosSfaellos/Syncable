@@ -1,8 +1,34 @@
 {
   "expo": {
-    "name": "syncable",
-    "slug": "syncable",
-    "version": "1.0.0"
-  },
-  "name": "syncable"
+    "name": "Syncable",
+    "slug": "MidiApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/music.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash2.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.stevesf.syncable"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/music.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.stevesf.syncable"
+    },
+    "web": {
+      "favicon": "./assets/music.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b3696638-9915-4886-b0cc-fcf6bf91226c"
+      }
+    }
+  }
 }

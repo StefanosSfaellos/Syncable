@@ -53,3 +53,43 @@ Code Structure
   MainScreen.js: Handles the main functionality of sending MIDI messages and selecting setlists.
   OptionsScreen.js: Allows users to configure IP address, port, and toggle dark mode.
   App.js: Sets up navigation between different screens of the app.
+
+
+**server.js**
+  const express = require('express');
+  const midi = require('midi');
+  const cors = require('cors');
+  
+  // Create a new Express application
+  const app = express();
+  const port = 3000;
+  
+  app.use(cors());
+  app.use(express.json());
+  
+  // Set up a new input and output instance
+  const input = new midi.Input();
+  const output = new midi.Output();
+  
+  // Open the first available input and output ports
+  input.openPort(0);
+  output.openPort(0);
+  
+  // Route to send MIDI messages
+  app.post('/send-midi', (req, res) => {
+    const { status, data1, data2 } = req.body;
+    output.sendMessage([status, data1, data2]);
+    res.send('MIDI message sent');
+  });
+  
+  // Route to receive MIDI messages
+  app.get('/receive-midi', (req, res) => {
+    input.on('message', (deltaTime, message) => {
+      res.json({ deltaTime, message });
+    });
+  });
+  
+  // Start the server
+  app.listen(port, () => {
+    console.log(`MIDI controller server listening at http://localhost:${port}`);
+  });

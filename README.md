@@ -55,7 +55,8 @@ Code Structure
   App.js: Sets up navigation between different screens of the app.
 
 
-**server.js**
+**server.js**: 
+
   const express = require('express');
   const midi = require('midi');
   const cors = require('cors');

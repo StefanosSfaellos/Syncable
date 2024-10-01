@@ -16,7 +16,7 @@ To run this app locally, follow these steps:
 
 Clone the Repository:
 
-  git clone https://github.com/StefanosSfaellos/midi-controller-app.git
+  git clone https://github.com/StefanosSfaellos/Syncable.git
   cd midi-controller-app
 
 Install Dependencies:
